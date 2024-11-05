@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'articles',    # Custom app for articles
     'media',       # Custom app for media content
-    'users',       # Custom app for user management
 ]
 
 
