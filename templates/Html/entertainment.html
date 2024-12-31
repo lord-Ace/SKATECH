@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+  <header id="head" class="container">
+    <section class="first header-child container">
+      <a href="">
+        <h1>ENTERTAINMENT EDGE</h1>
+      </a>
+    </section>
+    <section class="header-child pages">
+      <ul class="container exception" id="site-nav">
+        <li class="nav active-btn">FASHION & LIFESTYLE</li>
+        <li class="nav">SHOWBIZ & FILMDOM</li>
+        <li class="nav">CELEBRITIES & GOSSIP</li>
+        <li class="nav">AWARDS & EVENTS</li>
+        <li class="nav">TRAILERS & SKITS</li>
+      </ul>
+      <div id="regional-info" class="container">
+          <div id="clock" class="hide"></div>
+          <div class="container">
+            <label class="container" id="mode"><input id="state" type="checkbox" />dark mode</label>
+          </div>
+        </div>
+    </section>
+  </header>
+        <main id="content-holder">
+    <section class="main active-tab" id="FASHION">
+th8s is FASHION & LIFESTYLE
+    </section>
+    <section class="main" id="SHOWBIZ">
+th8s is SHOWBIZ & FILMDOM
+    </section>
+    <section class="main" id="CELEBRITIES">
+th8s is CELEBRITIES & GOSSIP
+    </section>
+    <section class="main" id="AWARDS">
+th8s is AWARDS & EVENTS
+    </section>
+    <section class="main" id="TRAILERS">
+th8s is TRAILERS & SKITS
+    </section>
+    </main>
+{% include 'Html/footer.html' %}
+{% endblock %}

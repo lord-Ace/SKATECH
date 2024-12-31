@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+<header id="head" class="container">
+    <section class="first header-child container">
+      <a href=""><img class="logo" src="{% static 'media/Logo.jpg' %}" alt="logo, " /></a>
+      <a href="">
+        <h1>SKATECH</h1>
+      </a>
+    </section>
+    <section class="header-child">
+      <ul class="container">
+        <li class="sitemap"><a href="#content-holder">NEWS</a></li>
+        <li class="sitemap"><a href="./Html/latest.html">VIDEO</a></li>
+        <li class="sitemap"><a href="#SUPPORT">SUPPORT US</a></li>
+        <li id="regional-info" class="container" style="flex-direction: column">
+          <div id="clock"></div>
+          <div class="container">
+            <label class="container" id="mode"><input id="state" type="checkbox" />dark mode</label>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </header>
+<h1>this is the homepage thank God :)</h1>
+{% include 'Html/footer.html' %}
+{% endblock %}

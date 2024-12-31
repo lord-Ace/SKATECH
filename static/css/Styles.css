@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: CurrentColor;
+    scroll-behavior: smooth;
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    49%{
+        transform: translateX(-100%);
+    }
+    51%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+body {
+    background: hsl(0, 0%, 94%);
+}
+input,
+button {
+    background: transparent;
+    font-size: large;
+    padding: 0.5em;
+    border: 0;
+    outline: 0;
+    border-radius: inherit;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#head,
+#content-preview,
+.holder {
+    position: relative;
+    background: hsl(210, 100%, 12%);
+    color: hsl(60, 33%, 97%);
+    width: 100%;
+    font-size: 1em;
+}
+.header-child,
+#write-up {
+    flex: 1 1 min(500px, 100%);
+    padding: .5em;
+}
+.logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 1em;
+}
+#clock {
+    font-size: x-large;
+    font-family: monospace;
+    letter-spacing: 0.5em;
+}
+
+#head .header-child ul:not(.exception) {
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.exception{
+  flex-wrap: wrap;
+  margin-top: .5em;
+  gap: .3em;
+  flex-basis: 100%;
+  font-size: .9em;
+}
+header ul li:not(#regional-info),
+#TRENDING{
+    border-right: 0.1em solid hsl(60, 33%, 70%);
+    min-width: 18%;
+    padding: 0 0.8em;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 0.3em;
+    flex-wrap: nowrap;
+}
+section.pages{
+    flex-basis: 100%;
+}
+#heroes-title {
+    position: absolute;
+    left: 0;
+    color: hsl(60, 33%, 90%);
+    top: 0;
+    z-index: 1;
+    font-size: 2em;
+}
+#top-stories,
+#base {
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100%;
+    height: 28em;
+    color: hsl(60, 33%, 97%);
+    overflow: hidden;
+}
+.arrows{
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+#carousel{
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+.img-box {
+    position: relative;
+    width: 100%;
+}
+.img-box img {
+    height: 28em;
+    width: 100vw;
+    transition: opacity 0.5s ease-in-out; 
+}
+.headline {
+    position: absolute;
+    font-size: 1.5em;
+    bottom: 5%;
+    left: 3%;
+}
+#content-holder {
+    padding: 1em;
+    position: relative;
+}
+#content-preview {
+    flex-wrap: nowrap;
+    padding: 0.5em;
+    position: sticky;
+    gap: 0.5em;
+    top: 0;
+    z-index: 1;
+}
+#site-nav:not(.exception), #regional-info, 
+#languages, #content-preview>nav{
+    flex-direction: column;
+    cursor: pointer;
+}
+#search,
+#email {
+    flex: 2 1 max(50%, 600px);
+    border-radius: 200em;
+    background: hsla(60, 33%, 97%, 40%);
+    flex-wrap: nowrap;
+    max-width: 70%;
+}
+#search input {
+    width: 87%;
+    align-self: center;
+}
+#search button,
+.social-media,
+.support-features ~ span {
+    width: 12%;
+    font-size: 1.8em;
+}
+section.content {
+    margin-bottom: 1em;
+    background: hsl(60, 33%, 95%);
+    box-shadow: 0.7em 0.7em 0.2em hsl(60, 33%, 92%);
+    border-radius: 1em;
+    height: 30em;
+    padding: 1em;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.stories-container{
+    height: 90%;
+    width: 100%;
+    overflow: auto;
+}
+.story{
+    height: 30%;
+    width: 100%;
+    gap: .5em;
+    margin-bottom: 1em;
+}
+.bn{
+    flex: 1 1 min(450px, 100%);
+}
+.cover-image{
+    content: url('../media/20240916_022310\ copy.jpg');
+    height: 100%;
+    width: 20%;
+    border-radius: 1em;
+}
+.story>figcaption{
+    height: 80%;
+    width: 70%;
+    
+}
+.info{
+    width: 100%;
+    height: 50%;
+}
+.stories-container::-webkit-scrollbar{
+    width: 3px;
+    height: 100%;
+    background: white;
+}
+.stories-container::-webkit-scrollbar-thumb{
+    background: #000;
+    height: 3%;
+}
+#featured-news {
+    grid-area: fn;
+}
+#breaking-news {
+    grid-area: bn;
+}
+#latest-news {
+    grid-area: ln;
+}
+#latest-news>div{
+    height: 100%;
+    width: 50%;
+    text-align: left;
+    cursor: default;
+}
+#multimedia {
+    grid-area: mm;
+    height: max-content;
+}
+#mm-container{
+    margin: 1em 0;
+    gap: 1em;
+    height: 80%;
+}
+#mm-video{
+    min-height: 22em;
+    width: min(500px, 100%);
+    border-radius: 3em;
+    background: hsl(60, 33%, 70%);
+}
+#images{
+    height: 22em;
+    flex: 1 1 min(500px, 100%);
+    overflow: hidden;
+}
+#images>div{
+    height: 45%;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: .4em;
+}
+.img-sections{
+    gap: .4em;
+    width: max-content;
+    height: 100%;
+    flex-wrap: nowrap;
+    animation: scroll 30s both ease-in-out infinite;
+}
+.mm-image{
+    content: url("../media/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871\ copy.jpg");
+    height: 100%;
+    width: 25em;
+    border-radius: 3em;
+}
+#advertisement {
+    grid-area: ad;
+}
+footer {
+    margin-top: 1.5em;
+    text-wrap: wrap;
+    justify-content: right;
+    padding: 0.5em;
+    background: hsl(210, 100%, 12%);
+    color: hsl(60, 33%, 97%);
+    gap: 1em;
+}
+.others,
+#dropdown-label,
+#newsletter {
+    flex-wrap: nowrap;
+}
+section#write-up {
+    align-self: self-start;
+}
+.support-features:not(input[type="radio"]),
+.others-child {
+    width: 48%;
+}
+footer figure.container, .others-child{
+    justify-content: left;
+    justify-content: flex-start;
+}
+#contributions input,
+#contributions button,
+footer input,
+footer button,
+#mode {
+    text-wrap: nowrap;
+    font-size: x-small;
+    background: none;
+    border-radius: 0;
+    border: 0.05em solid hsl(60, 33%, 97%);
+}
+#base,
+footer,
+.others,
+#social-media-handles{
+    gap: 0.5em;
+    font-size: large;
+    justify-content: space-between;
+    align-items: self-start;
+    height: max-content;
+}

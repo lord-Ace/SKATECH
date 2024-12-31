@@ -1,0 +1,48 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+  <header id="head" class="container">
+    <section class="first header-child container">
+      <a href="">
+        <h1>THE TECH SPHERE</h1>
+      </a>
+    </section>
+    <section class="header-child pages" id="pages">
+      <ul class="container exception" id="site-nav">
+        <li class="nav active-btn">TECH FOR GOOD</li>
+        <li class="nav">EMERGING TECH</li>
+        <li class="nav">CYBERSECURITY & AI</li>
+        <li class="nav">TECH EMPOWERMENT</li>
+        <li class="nav">TECH CAREER & CULTURE</li>
+      </ul>
+       <div id="regional-info" class="container">
+          <div id="clock" class="hide"></div>
+          <div class="container">
+            <label class="container" id="mode"><input id="state" type="checkbox" />dark mode</label>
+          </div>
+        </div>
+    </section>
+  </header>
+      <main id="content-holder">
+     <section class="main active-tab" id="TECH FOR GOOD">
+      {{ articles }}
+th8s is TECH FOR GOOD
+{% for article in articles %}
+  <h2>1. {{ article.Title }}</h2>
+  {% endfor %}
+    </section>
+    <section class="main" id="EMERGING TECH">
+th8s is EMERGING TECH
+    </section>
+    <section class="main" id="AI">
+th8s is CYBERSECURITY
+    </section>
+    <section class="main" id="NETWORKING & SECURITY">
+th8s is NETWORKING & SECURITY
+    </section>
+    <section class="main" id="">
+th8s is TECH CAREER & CULTURE
+    </section>
+    </main>
+{% include 'Html/footer.html' %}
+{% endblock %}

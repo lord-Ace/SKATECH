@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+  <header id="head" class="container">
+    <section class="first header-child container">
+      <a href="">
+        <h1> THE FINANCE FORUM</h1>
+      </a>
+    </section>
+    <section class="header-child pages">
+      <ul class="container exception" id="site-nav">
+        <li class="nav active-btn">MARKET NEWS</li>
+        <li class="nav">INDUSTRY & ECONOMY</li>
+        <li class="nav">CRYPTOCURRENCY</li>
+      </ul>
+              <div id="regional-info" class="container">
+          <div id="clock" class="hide"></div>
+          <div class="container">
+            <label class="container" id="mode"><input id="state" type="checkbox" />dark mode</label>
+          </div>
+        </div>
+    </section>
+  </header>
+        <main id="content-holder">
+    <section class="main active-tab" id="MARKET">
+th8s is MARKET NEWS
+    </section>
+    <section class="main" id="INDUSTRY">
+th8s is INDUSTRY & ECONOMY
+    </section>
+    <section class="main" id="CRYPTOCURRENCY">
+th8s is CRYPTOCURRENCY
+    </section>
+    </main>
+{% include 'Html/footer.html' %}
+{% endblock %}

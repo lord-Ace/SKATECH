@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<header id="head" class="container">
+    <section class="first header-child container">
+      <a href="">
+        <h1>FEATURED NEWS</h1>
+      </a>
+    </section>
+            <div id="regional-info" class="container" style="flex-direction: column">
+          <div id="clock" class="hide"></div>
+          <div class="container">
+            <label class="container" id="mode"><input id="state" type="checkbox" />dark mode</label>
+          </div>
+        </div>
+  </header>
+this is FEATURED
+{% for article in articles %}
+  <h2>{{ article.Title }}</h2>
+{% endfor %}
+{% include 'Html/footer.html' %}
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+    <header id="head" class="container">
+    <section class="first header-child container">
+      <a href="">
+        <h1>THE LATEST</h1>
+      </a>
+    </section>
+    <section class="header-child pages">
+      <ul class="container exception" id="site-nav">
+        <li class="nav active-btn">TRENDING</li>
+        <li class="nav">HAPPENING TODAY</li>
+      </ul>
+      <li id="regional-info" class="container">
+          <div id="clock" class="hide"></div>
+          <div class="container">
+            <label class="container" id="mode"><input id="state" type="checkbox" />dark mode</label>
+          </div>
+        </li>
+    </section>
+  </header>
+      <main id="content-holder">
+    <section class="main active-tab" id="trending">
+      {% for article in articles %}
+  <h2>{{ article.Date_published }}.. ee,</h2>
+{% endfor %}
+    </section>
+    <section class="main" id="happening-today">
+      happening-today
+    </section>
+    </main>
+{% include 'Html/footer.html' %}
+{% endblock %}
